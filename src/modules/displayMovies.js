@@ -21,7 +21,7 @@ const updateLikes = async () => {
 const display = async () => {
   const data = await fetchMovieData();
   counter(data);
-  data.forEach(({ '#TITLE': title, '#IMG-POSTER': poster, '#IMDB_ID': id }) => {
+  data.forEach(({ '#TITLE': title, '#IMG_POSTER': poster, '#IMDB_ID': id }) => {
     list.innerHTML += `
       <li id=${id} class="list">
         <div class="image-wrapper">
