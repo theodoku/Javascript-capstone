@@ -8,9 +8,9 @@ const fetchMovieData = async () => {
 };
 
 const fetchMovieDetails = async (id) => {
-    const response = await fetch(`${MOVIEDETAILSURL}?tt=${id}`);
-    const data = await response.json();
-    return data;
+  const response = await fetch(`${MOVIEDETAILSURL}?tt=${id}`);
+  const data = await response.json();
+  return data;
 };
 
 const fetchLikes = async () => {
@@ -20,15 +20,17 @@ const fetchLikes = async () => {
 };
 
 const postLikes = async (id) => {
-    const response = await fetch(LIKESURL, {
-        method: 'POST',
-        headers: {
-            'Content-type': 'application/json',
-        },
-        body: JSON.stringify({ item_id: id }),
-    });
-    const data = response.text();
-    const { result } = data;
-    return result;
+  const response = await fetch(LIKESURL, {
+    method: 'POST',
+    headers: {
+      'Content-type': 'application/json',
+    },
+    body: JSON.stringify({ item_id: id }),
+  });
+  const data = response.text();
+  const { result } = data;
+  return result;
 };
-export { fetchMovieData, fetchLikes, postLikes, fetchMovieDetails };
+export {
+  fetchMovieData, fetchLikes, postLikes, fetchMovieDetails,
+};

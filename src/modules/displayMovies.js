@@ -1,4 +1,6 @@
-import { fetchMovieData, fetchLikes, postLikes, fetchMovieDetails } from '../configurations/utilities.js';
+import {
+  fetchMovieData, fetchLikes, postLikes, fetchMovieDetails,
+} from '../configurations/utilities.js';
 import like from '../assets/likeIcon.png';
 import counter from './itemsCounter.js';
 
@@ -56,7 +58,7 @@ const display = async () => {
   updateLikes();
 
   const movieDetails = await fetchMovieDetails(data[0]['#IMDB_ID']);
-  console.log(movieDetails);
+  return (movieDetails);
 };
 
 export default display;

@@ -1,4 +1,4 @@
-import counter from '../modules/itemsCounter.js'
+import counter from '../modules/itemsCounter.js';
 
 describe('counter', () => {
   test('should update the movie element with the length of the provided data', () => {
