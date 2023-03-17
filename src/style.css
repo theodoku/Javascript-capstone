@@ -13,6 +13,11 @@ img {
   width: 100%;
 }
 
+#logo {
+  width: 15px;
+  height: 15px;
+}
+
 .poster-img {
   height: 400px;
 }
@@ -20,6 +25,7 @@ img {
 a {
   text-decoration: none;
   color: gray;
+  padding: 1rem;
 }
 
 .topnav {
@@ -28,6 +34,7 @@ a {
   justify-content: space-between;
   padding: 5px 16px;
   align-items: center;
+  margin-bottom: 50px;
 }
 
 ul {
