@@ -4,4 +4,6 @@ const MOVIEDETAILSURL = 'https://search.imdbot.workers.dev/';
 
 const LIKESURL = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/JIjFwoEkLZESIoGzrK2r/likes';
 
-export { HARRYPORTERMOVIESURL, LIKESURL, MOVIEDETAILSURL };
+const COMMENTSURL = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/JIjFwoEkLZESIoGzrK2r/comments';
+
+export { HARRYPORTERMOVIESURL, LIKESURL, MOVIEDETAILSURL, COMMENTSURL };

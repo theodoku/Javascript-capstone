@@ -1,4 +1,4 @@
-import { HARRYPORTERMOVIESURL, LIKESURL, MOVIEDETAILSURL } from './constVariables.js';
+import { HARRYPORTERMOVIESURL, LIKESURL, MOVIEDETAILSURL, COMMENTSURL } from './constVariables.js';
 
 const fetchMovieData = async () => {
   const response = await fetch(HARRYPORTERMOVIESURL);
@@ -31,6 +31,40 @@ const postLikes = async (id) => {
   const { result } = data;
   return result;
 };
+
+const postComments = async (comments) => {
+  const response = await fetch(COMMENTSURL, {
+    method: 'POST',
+    headers: {
+      'Content-type': 'application/json',
+    },
+    body: JSON.stringify(comments),
+  });
+  const data = response.json();
+  const { result } = data;
+  return result;
+};
+
+const getComments = async (id) => {
+  const response = await fetch(COMMENTSURL + `?item_id=${id}`, {
+    method: 'GET',
+    headers: {
+      'Content-type': 'application/json',
+    }
+  });
+  const data = response.json();
+  return data;
+};
+
+const selectMovieDetails = async (id) => {
+  const data = await fetchMovieDetails(id);
+  return (data);
+}
 export {
-  fetchMovieData, fetchLikes, postLikes, fetchMovieDetails,
+  fetchMovieData,
+  fetchLikes,
+  postLikes,
+  postComments,
+  getComments,
+  selectMovieDetails,
 };
